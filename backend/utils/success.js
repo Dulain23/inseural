@@ -3,6 +3,6 @@ export const successHandler = (statusCode, message, body = {}) => {
         statusCode,
         message,
         success: true,
-        body
+        body,
     };
 }
