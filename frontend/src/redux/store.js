@@ -1,12 +1,14 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
-import sessionStorage from "redux-persist/es/storage/session";
+import localStorage from "redux-persist/es/storage";
 
 // Import Reducers
 import alertReducer from "./alertSlice";
+import userReducer from "./userSlice"
 
 // Combine Reducers
 const rootReducer = combineReducers({ 
+    user: userReducer,
     alert: alertReducer
 });
 
@@ -14,7 +16,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
     key: 'root',
     version: 1,
-    storage: sessionStorage,
+    storage: localStorage,
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

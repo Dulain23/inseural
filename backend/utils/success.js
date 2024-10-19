@@ -5,4 +5,4 @@ export const successHandler = (statusCode, message, body = {}) => {
         success: true,
         body,
     };
-}
+};
