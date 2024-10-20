@@ -5,6 +5,7 @@ import { store, persistor } from './redux/store';
 
 // Import Pages
 import Home from './Home';
+import Form from './Form';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/form" element={<Form />} />
           </Routes>
         </BrowserRouter>
       </PersistGate>

@@ -5,7 +5,7 @@ export default defineConfig(({ mode }) => {
 
   const env = loadEnv(mode, process.cwd());
 
-  const targetUrl = env.VITE_SERVER_URL || 'http://localhost:4000';
+  const targetUrl = 'http://localhost:4000';
 
   return {
     plugins: [react()],
